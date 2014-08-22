@@ -253,3 +253,8 @@ PROJECT_MEMBERS_LIMIT_CHOICES = getattr(settings,
 ADMIN_API_PERMITTED_GROUPS = getattr(settings,
                                      'ASTAKOS_ADMIN_API_PERMITTED_GROUPS',
                                      ['admin-api'])
+
+# Default settings for AUTH_LDAP
+AUTH_LDAP_USER_ATTR_MAP = {"first_name": "givenName", "last_name": "sn",
+                           "email": "mail"}
+AUTH_LDAP_ALWAYS_UPDATE_USER = False
